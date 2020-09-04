@@ -17,7 +17,7 @@ const forecast=(low,long,callback)=>
         }
         else
         {
-        callback(undefined,body.current.temperature+" chance of rain is "+body.current.humidity)
+        callback(undefined,body.current.temperature+" chance of rain is "+body.current.humidity+" weather is " +body.current.weather_descriptions)
         }
     })
 
