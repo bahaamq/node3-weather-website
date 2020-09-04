@@ -1,8 +1,3 @@
-
-
-
-
-
 const forms=document.querySelector('form')
 const loc=document.querySelector('input')
 const msgone=document.querySelector('#msg-one')
@@ -13,7 +8,7 @@ forms.addEventListener('submit',(e)=>
     msgone.textContent="loading  "
     msgtwo.textContent=""
 e.preventDefault()
-const url="http://localhost:3000/weather?address="+encodeURIComponent(loc.value)
+const url="/weather?address="+encodeURIComponent(loc.value)
 fetch(url).then((response)=>
 {
 response.json().then((data)=>

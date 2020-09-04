@@ -6,7 +6,7 @@ const hbs=require('hbs')
 const geocode=require('./utilis/geocode')
 const forecast=require('./utilis/forecast')
 const request =require('request')
-
+const port=process.env.PORT||3000
 console.log(__dirname)
 
 const app=express()
@@ -146,7 +146,7 @@ app.get('*', (req,res)=>
 
 
 
-app.listen(3000,()=>
+app.listen(port,()=>
 {
-    console.log("server listenss on port 3000")
+    console.log("server listenss on port"+port)
 })
